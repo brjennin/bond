@@ -1,4 +1,4 @@
-class UserAgent
+class Bond
   class Version
     include ::Comparable
 

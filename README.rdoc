@@ -1,17 +1,17 @@
-= UserAgent
+= Bond
 
-UserAgent is a Ruby library that parses and compares HTTP User Agents.
+Bond is used to seek out Agents.  It is basically just a re-namespaced version of UserAgent gem but we had namespace conflicts
 
 === Installation
 
-  gem install useragent
+  gem install bond
 
 === Examples
 
 ==== Reporting
 
   string = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5'
-  user_agent = UserAgent.parse(string)
+  user_agent = Bond.parse(string)
   user_agent.browser
   # => 'Chrome'
   user_agent.version
@@ -28,7 +28,7 @@ UserAgent is a Ruby library that parses and compares HTTP User Agents.
     Browser.new("Internet Explorer", "7.0")
   ]
 
-  user_agent = UserAgent.parse(request.user_agent)
+  user_agent = Bond.parse(request.user_agent)
   SupportedBrowsers.detect { |browser| user_agent >= browser }
 
 

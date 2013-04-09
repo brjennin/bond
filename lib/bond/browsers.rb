@@ -1,10 +1,10 @@
-require 'user_agent/browsers/all'
-require 'user_agent/browsers/gecko'
-require 'user_agent/browsers/internet_explorer'
-require 'user_agent/browsers/opera'
-require 'user_agent/browsers/webkit'
+require 'bond/browsers/all'
+require 'bond/browsers/gecko'
+require 'bond/browsers/internet_explorer'
+require 'bond/browsers/opera'
+require 'bond/browsers/webkit'
 
-class UserAgent
+class Bond
   module Browsers
     Security = {
       "N" => :none,

@@ -1,4 +1,4 @@
-require 'user_agent'
+require 'bond'
 
 shared_examples_for "Opera browser" do
   it "should return 'Opera' as its browser" do
@@ -10,9 +10,9 @@ shared_examples_for "Opera browser" do
   end
 end
 
-describe "UserAgent: 'Opera/9.27 (Macintosh; Intel Mac OS X; U; en)'" do
+describe "Bond: 'Opera/9.27 (Macintosh; Intel Mac OS X; U; en)'" do
   before do
-    @useragent = UserAgent.parse("Opera/9.27 (Macintosh; Intel Mac OS X; U; en)")
+    @useragent = Bond.parse("Opera/9.27 (Macintosh; Intel Mac OS X; U; en)")
   end
 
   it_should_behave_like "Opera browser"
@@ -34,9 +34,9 @@ describe "UserAgent: 'Opera/9.27 (Macintosh; Intel Mac OS X; U; en)'" do
   end
 end
 
-describe "UserAgent: 'Opera/9.27 (Windows NT 5.1; U; en)'" do
+describe "Bond: 'Opera/9.27 (Windows NT 5.1; U; en)'" do
   before do
-    @useragent = UserAgent.parse("Opera/9.27 (Windows NT 5.1; U; en)")
+    @useragent = Bond.parse("Opera/9.27 (Windows NT 5.1; U; en)")
   end
 
   it_should_behave_like "Opera browser"
@@ -58,9 +58,9 @@ describe "UserAgent: 'Opera/9.27 (Windows NT 5.1; U; en)'" do
   end
 end
 
-describe "UserAgent: 'Opera/9.80'" do
+describe "Bond: 'Opera/9.80'" do
   before do
-    @useragent = UserAgent.parse("Opera/9.80")
+    @useragent = Bond.parse("Opera/9.80")
   end
 
   it_should_behave_like "Opera browser"
@@ -82,9 +82,9 @@ describe "UserAgent: 'Opera/9.80'" do
   end
 end
 
-describe "UserAgent: 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.10'" do
+describe "Bond: 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.10'" do
   before do
-    @useragent = UserAgent.parse("Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.10")
+    @useragent = Bond.parse("Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.10")
   end
 
   it_should_behave_like "Opera browser"
@@ -106,9 +106,9 @@ describe "UserAgent: 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.1
   end
 end
 
-describe "UserAgent: 'Opera/9.80 (Windows NT 6.0; U; en) Presto/2.2.15 Version/10.10'" do
+describe "Bond: 'Opera/9.80 (Windows NT 6.0; U; en) Presto/2.2.15 Version/10.10'" do
   before do
-    @useragent = UserAgent.parse("Opera/9.80 (Windows NT 6.0; U; en) Presto/2.2.15 Version/10.10")
+    @useragent = Bond.parse("Opera/9.80 (Windows NT 6.0; U; en) Presto/2.2.15 Version/10.10")
   end
 
   it_should_behave_like "Opera browser"

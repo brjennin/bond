@@ -1,4 +1,4 @@
-require 'user_agent'
+require 'bond'
 
 shared_examples_for "Firefox browser" do
   it "should return 'Firefox' as its browser" do
@@ -15,7 +15,7 @@ end
 
 describe 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b8) Gecko/20100101 Firefox/4.0b8' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b8) Gecko/20100101 Firefox/4.0b8')
+    @useragent = Bond.parse('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b8) Gecko/20100101 Firefox/4.0b8')
   end
 
   it_should_behave_like "Firefox browser"
@@ -45,7 +45,7 @@ end
 
 describe 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13')
+    @useragent = Bond.parse('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13')
   end
 
   it_should_behave_like "Firefox browser"
@@ -73,9 +73,9 @@ describe 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Ge
   it { @useragent.should_not be_mobile }
 end
 
-describe "UserAgent: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1'" do
+describe "Bond: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1")
+    @useragent = Bond.parse("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008070206 Firefox/3.0.1")
   end
 
   it_should_behave_like "Firefox browser"
@@ -103,9 +103,9 @@ describe "UserAgent: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/
   it { @useragent.should_not be_mobile }
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14'" do
+describe "Bond: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14")
+    @useragent = Bond.parse("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14")
   end
 
   it_should_behave_like "Firefox browser"
@@ -131,9 +131,9 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14'" do
+describe "Bond: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14")
+    @useragent = Bond.parse("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14")
   end
 
   it_should_behave_like "Firefox browser"
@@ -159,9 +159,9 @@ describe "UserAgent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.1
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1'" do
+describe "Bond: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1")
+    @useragent = Bond.parse("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1")
   end
 
   it_should_behave_like "Firefox browser"
@@ -187,9 +187,9 @@ describe "UserAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0.1) Gecko/20121
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Windows NT 6.1; Win64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1'" do
+describe "Bond: 'Mozilla/5.0 (Windows NT 6.1; Win64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Windows NT 6.1; Win64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1")
+    @useragent = Bond.parse("Mozilla/5.0 (Windows NT 6.1; Win64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1")
   end
 
   it_should_behave_like "Firefox browser"
@@ -217,7 +217,7 @@ end
 
 describe 'Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0')
+    @useragent = Bond.parse('Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0')
   end
 
   it_should_behave_like "Firefox browser"
@@ -243,9 +243,9 @@ describe 'Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0' do
   end
 end
 
-describe 'UserAgent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0' do
+describe 'Bond: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0')
+    @useragent = Bond.parse('Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0')
   end
 
   it_should_behave_like "Firefox browser"
@@ -271,9 +271,9 @@ describe 'UserAgent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefo
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12'" do
+describe "Bond: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12")
+    @useragent = Bond.parse("Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12")
   end
 
   it_should_behave_like "Firefox browser"
@@ -299,9 +299,9 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12'" do
+describe "Bond: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12")
+    @useragent = Bond.parse("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.12) Gecko/20070508 Firefox/1.5.0.12")
   end
 
   it_should_behave_like "Firefox browser"
@@ -327,9 +327,9 @@ describe "UserAgent: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.1
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060612 Firefox/1.5.0.4 Flock/0.7.0.17.1'" do
+describe "Bond: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060612 Firefox/1.5.0.4 Flock/0.7.0.17.1'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060612 Firefox/1.5.0.4 Flock/0.7.0.17.1")
+    @useragent = Bond.parse("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/20060612 Firefox/1.5.0.4 Flock/0.7.0.17.1")
   end
 
   it_should_behave_like "Firefox browser"
@@ -355,9 +355,9 @@ describe "UserAgent: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.4) Gecko/
   end
 end
 
-describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.14) Gecko/20080409 Camino/1.6 (like Firefox/2.0.0.14)'" do
+describe "Bond: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.14) Gecko/20080409 Camino/1.6 (like Firefox/2.0.0.14)'" do
   before do
-    @useragent = UserAgent.parse("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.14) Gecko/20080409 Camino/1.6 (like Firefox/2.0.0.14)")
+    @useragent = Bond.parse("Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.14) Gecko/20080409 Camino/1.6 (like Firefox/2.0.0.14)")
   end
 
   it "should return 'Camino' as its browser" do
@@ -385,9 +385,9 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.14
   end
 end
 
-describe 'UserAgent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Iceweasel/2.0 (Debian-2.0+dfsg-1)' do
+describe 'Bond: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Iceweasel/2.0 (Debian-2.0+dfsg-1)' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Iceweasel/2.0 (Debian-2.0+dfsg-1)')
+    @useragent = Bond.parse('Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/20061024 Iceweasel/2.0 (Debian-2.0+dfsg-1)')
   end
 
   it "should return 'Iceweasel' as its browser" do
@@ -415,9 +415,9 @@ describe 'UserAgent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1) Gecko/200
   end
 end
 
-describe 'UserAgent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.4) Gecko/20091017 SeaMonkey/2.0' do
+describe 'Bond: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.4) Gecko/20091017 SeaMonkey/2.0' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.4) Gecko/20091017 SeaMonkey/2.0')
+    @useragent = Bond.parse('Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.4) Gecko/20091017 SeaMonkey/2.0')
   end
 
   it "should return 'Seamonkey' as its browser" do
@@ -447,7 +447,7 @@ end
 
 describe 'Mozilla/5.0 (Android; Mobile; rv:19.0) Gecko/19.0 Firefox/19.0' do
   before do
-    @useragent = UserAgent.parse('Mozilla/5.0 (Android; Mobile; rv:19.0) Gecko/19.0 Firefox/19.0')
+    @useragent = Bond.parse('Mozilla/5.0 (Android; Mobile; rv:19.0) Gecko/19.0 Firefox/19.0')
   end
 
   it "should return true for mobile?" do

@@ -1,4 +1,4 @@
-class UserAgent
+class Bond
   module Browsers
     module Gecko
       def self.extend?(agent)

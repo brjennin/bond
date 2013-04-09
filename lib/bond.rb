@@ -1,9 +1,9 @@
-require 'user_agent/comparable'
-require 'user_agent/browsers'
-require 'user_agent/operating_systems'
-require 'user_agent/version'
+require 'bond/comparable'
+require 'bond/browsers'
+require 'bond/operating_systems'
+require 'bond/version'
 
-class UserAgent
+class Bond
   # http://www.texsoft.it/index.php?m=sw.php.useragent
   MATCHER = %r{
     ^([^/\s]+)        # Product

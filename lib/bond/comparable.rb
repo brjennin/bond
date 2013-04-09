@@ -1,4 +1,4 @@
-class UserAgent
+class Bond
   # A custom Comparable module that will always return false
   # if the <=> returns false
   module Comparable
